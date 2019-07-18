@@ -1,0 +1,16 @@
+header{
+    
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    background-color: red;
+    
+     /* background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); 
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); */
+    background-image: url("../images/3px-tile.png");
+
+
+
+
+}

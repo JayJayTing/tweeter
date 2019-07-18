@@ -1,0 +1,241 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+ /* *{border:2px dotted red} */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+ @media (min-width: 600px){
+  .divider{
+    display: flex;
+    flex-direction: row;
+  }
+  #header-margin{
+    height: 50%;
+    width: 100%;
+    margin: 3%;
+  }
+  #header-image{
+    width: 60%;
+    height: auto;
+  }
+  #write{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    
+  }
+
+}
+@media (max-width: 599px){
+  .divider{
+    display: flex;
+    flex-direction: column;
+  }
+  #top-header{
+   background-color: transparent;
+   position: fixed;
+  }
+  #header-margin{
+    position: fixed;
+    height:13rem;
+    margin: 0%;
+    top: 0px;
+
+    
+  }
+  .container{
+    margin: none;
+    
+  }
+  html main{
+    
+    margin: 0%;
+    width: 100%;
+  }
+  #header-image{
+    width: 6rem;
+    height: auto;
+    margin-top: 4rem;
+  }
+  #name-image{
+    margin: 0;
+    font-size: 1.4rem;
+    
+    
+  }
+  #write{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+}
+
+
+
+.error-message{
+  display: none;
+  padding: 3%;
+  border: solid red;
+  width: 100%
+}
+.error-message text{
+  display: flex;
+  justify-content: center;
+  color: red
+}
+#write:active{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+}
+
+/* .divider{
+  display: flex;
+  flex-direction: row;
+  
+  
+
+} */
+
+
+
+#name-image{
+  font-size: 1.2 rem;
+ 
+}
+
+
+
+.new-tweet-tweets-container{
+  margin: 3%;
+}
+
+#arrow{
+  size: 10%
+ }
+#header{
+  display: flex;
+  
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  
+
+}
+
+@media only screen and ( max-width: 600px){
+
+}
+
+
+@keyframes droploop{
+  0% {transform: translate(0px, 0px);}
+  50% {transform: translate(0px, 5px);}
+  75% {transform: translate(0px, 10px);}
+  100% {transform: translate(0px, 0px);}
+  
+}
+
+#arrow{
+  animation-name: droploop;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#write{
+  
+  height: 100%;
+ 
+  
+  
+   
+}
+
+ 
+
+
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main{
+  width: 90%;
+  text-align: left;
+  color:#545149;
+  padding-top: 120px;
+  margin: 0 auto;
+}
+
+.bottomtweet{
+  display: flex;
+  justify-content: space-between;
+
+}
+.paragraphFormat{
+  border-bottom: solid; 
+  padding: 2%; 
+  margin-left: 5%; 
+  width: 90%;
+}
+.tweetIdFormat{
+  display: flex; 
+  justify-content: top"
+}
+.boxDesign{
+  border-style: solid; 
+  width: 100%; 
+  
+
+}
+.boxDesign:hover{
+  
+  box-shadow: 5px 5px black;
+
+}
+.lg2{
+  display: none;
+
+}
+.boxDesign:hover .lg2{
+  display: block;
+  
+
+}
+
+section.boxDesign header {
+  padding: 2%;
+}
+
+.lg2{
+  position: absolute; 
+  right: 10%
+}
+
+
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */

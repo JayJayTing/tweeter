@@ -1,0 +1,36 @@
+new-tweet{
+    background-color: transparent;
+    color: #eeeeee;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #eeeeee 1px;
+    padding: 3px 10px;
+
+    
+}
+
+.new-tweet h2{
+color: blue;
+font-family: "Bungee","cursive", "sans-serif";
+
+
+
+}
+.new-tweet textarea:focus{
+    outline: none;
+
+}
+.new-tweet textarea{
+   
+    width: 100%;
+    background-color: transparent;
+    border-top: transparent; 
+    border-left: transparent;
+    border-right: transparent;
+    color: black;
+    
+}
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,700i&display=swap" rel="stylesheet">
+  
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+  <link rel="stylesheet" href="/styles/newtweet.css" type="text/css" />
+
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/app.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/tweetDesign.js"></script>
+  <script type="text/javascript" src="/scripts/newTweet.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Top nav bar (fixed) -->
+  <nav id = top-header>
+    <form id = "header">
+      
+        <text>Tweeter</text>
+       
+          <div id = 'write'>
+          <text >Write a new tweet</text>
+          <i id = "arrow" class="fas fa-angle-double-down"></i>
+
+          </div>
+        
+        
+        
+      
+    
+    </form>
+    
+
+  </nav>
+
+  <!-- Page-specific (main) content here -->
+  
+  <main class="container">
+<div class = "divider">
+    <!--------------------------------- header -------------------------->
+    <header id = header-margin>
+      
+        <img id = header-image src="/images/profile-hex.png">
+      
+ 
+      
+        <h2 id = name-image>Your Name</h2>
+      
+    </header>
+
+   
+   
+ 
+
+  <!-- --------------------------compose tweet---------------------------- -->
+  <div class = "new-tweet-tweets-container">
+    <section class="new-tweet">
+       
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets" style="left: 5%">
+  
+          <textarea id="textarea1" name="text" placeholder="What are you humming about?"></textarea>
+          <input class = "submitTweet" type="submit" value="Tweet">
+          <span id="counter" class="counter" style="color: green">140</span>
+  
+  
+        </form>
+      </section>
+      <div class ="error-message">
+          <text>invalid text!</text>
+       </div>
+
+      <!-- ---------------tweets------------------- end -->
+    
+      <br>
+  
+      <div id = "tweetsContainer">
+     
+      </div>
+    </div>
+  
+ </div>
+</div>
+</body>
+</main>
+</html>
