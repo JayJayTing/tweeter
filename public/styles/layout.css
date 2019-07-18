@@ -37,6 +37,9 @@ html {
     cursor: pointer;
     
   }
+  .new-tweet-tweets-container{
+    margin: 0%;
+  }
 
 }
 @media (max-width: 599px){
@@ -84,6 +87,9 @@ html {
     align-items: center;
     cursor: pointer;
   }
+  .new-tweet-tweets-container{
+     margin-top: 4rem;
+  }
 
 }
 
@@ -126,9 +132,7 @@ html {
 
 
 
-.new-tweet-tweets-container{
-  margin: 3%;
-}
+
 
 #arrow{
   size: 10%

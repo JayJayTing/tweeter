@@ -71,7 +71,9 @@ const markup = `
     </p>
   </span>
   <span class="bottomtweet">
-    <div>10 days ago</div>
+    <div>${moment(
+      new Date(tweet.created_at)
+    ).fromNow()}
     <div>
       <span>
         <button>b1</button>
@@ -89,7 +91,7 @@ const markup = `
 <br>
 `
 
-$tweet = $tweet.append (markup);
+$tweet = $tweet.append(markup);
 
   return $tweet;
 }
@@ -111,7 +113,7 @@ function loadTweets(){
     url: "/tweets/",
     dataType: 'json',
 }).done(function(data){ 
-
+  $("#tweetsContainer").empty();
    renderTweets(data);
     
 }).fail(function(){
@@ -122,32 +124,25 @@ function postTweets(){
   
     $("form").on("submit", function(event){
         event.preventDefault();
-
-        
-        
-
-        
-        let textInput = $("#textarea1").serialize()
+        let textInput = $("#textarea1").serialize();
         
         if(!isValidText(textInput)){
           $(".error-message").slideDown("slow", function(){
-            setTimeout(function(){$(".error-message").slideToggle()}, 0);
+            setTimeout(function(){$(".error-message").slideToggle()}, 1000);
           });
-
-          
-          
-           
         }else{
             $.ajax('/tweets/', {
             method: 'POST',
             data: $(this).serialize(),
             dataType: 'text',
+            
         }).done(function(){
-           
-                console.log("success")
+           //get latest
+           $("#textarea1").val('');
             data.content = "text= "
-          renderTweets(data);
-          location.reload();
+          //renderTweets(data);
+          loadTweets(data);
+          //location.reload();
             
         }).error(function(){
             console.log("post tweet error")
