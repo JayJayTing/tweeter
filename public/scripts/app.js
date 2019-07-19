@@ -8,6 +8,7 @@ const escape =  function(str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
+//these are all the tweets that will be appeneded;
 const data = [
     {
       "user": {
@@ -32,13 +33,13 @@ const data = [
       "created_at": 1461113959088
     }
   ]
-
+// will append tweets into the data file later on
 const renderTweets = function(tweets) {
   // loops through tweets
   let array = [] 
   for(let tweet of tweets){
      
-     array.unshift(createTweetElement(tweet))
+     array.unshift(createTweetElement(tweet));
      
   }
   $("#tweetsContainer").append(array);
@@ -48,7 +49,7 @@ const renderTweets = function(tweets) {
 
 
 
-
+// creates a tweet html structure and returns it
 const createTweetElement = function(tweet) {
   let $tweet = $('<article>').addClass('tweet');
   // ...
@@ -75,7 +76,7 @@ const markup = `
       new Date(tweet.created_at)
     ).fromNow()}
     <div>
-      <span>
+      <span class="buttons">
         <button>b1</button>
         <button>b2</button>
         <button>b3</button>
@@ -95,7 +96,7 @@ $tweet = $tweet.append(markup);
 
   return $tweet;
 }
-
+//checks if the text given by user is valid
 function isValidText(text){
   if(text == "text=" || text.length> 145){
     return false;
@@ -104,6 +105,32 @@ function isValidText(text){
   } 
 
 }
+
+//will count of user and update it live;
+function textCount(){
+  $("#textarea1").on("input", function(event) {
+      //console.log('this is clicked: ', $(this).val())
+   
+  
+      let counter = 140 - $(this).val().length;
+   
+      $("#counter").text(counter);
+      
+      if (counter < 0) {
+        $("#counter").css('color', 'red');
+      } else {
+        $("#counter").css('color', 'green');
+      }
+  
+  
+  
+   
+      //$("#counter").val(counter --);
+  
+    });
+  }
+
+  //this will update the html file on the browser, updating the tweets live
 function loadTweets(){
   event.preventDefault();
   $.ajax( {
@@ -139,6 +166,7 @@ function postTweets(){
         }).done(function(){
            //get latest
            $("#textarea1").val('');
+           $("#counter").text("140");
             data.content = "text= "
           //renderTweets(data);
           loadTweets(data);
@@ -163,7 +191,8 @@ $("#write").on("click", function(event){
 }
 
 $(document).ready(function() {
-  
+  $(".new-tweet").slideToggle();
+  textCount();
   loadTweets();
   postTweets();
   toggleTextBox();

@@ -34,5 +34,5 @@ app.listen(PORT, () => {
 });
 
 app.post("/tweets", (req, res)=>{
-console.log("hello there this is working")
-})
+  console.log("hello there this is working");
+});

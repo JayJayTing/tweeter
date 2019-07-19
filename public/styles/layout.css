@@ -16,6 +16,11 @@ html {
  */
 
  @media (min-width: 600px){
+  #top-header{
+  
+    position: fixed;
+    z-index: 10000;
+   }
   .divider{
     display: flex;
     flex-direction: row;
@@ -24,6 +29,7 @@ html {
     height: 50%;
     width: 100%;
     margin: 3%;
+    z-index: 1000;
   }
   #header-image{
     width: 60%;
@@ -50,17 +56,19 @@ html {
   #top-header{
    background-color: transparent;
    position: fixed;
+   z-index: 10000;
   }
   #header-margin{
     position: fixed;
     height:13rem;
     margin: 0%;
     top: 0px;
+    z-index: 1000;
 
     
   }
   .container{
-    margin: none;
+    margin: 0px;
     
   }
   html main{
@@ -76,8 +84,6 @@ html {
   #name-image{
     margin: 0;
     font-size: 1.4rem;
-    
-    
   }
   #write{
     
@@ -227,6 +233,12 @@ main{
   display: block;
   
 
+}
+.buttons{
+  display:none;
+}
+.boxDesign:hover .buttons{
+  display: block;
 }
 
 section.boxDesign header {
