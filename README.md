@@ -6,11 +6,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ##Final Product
 
-!["Screenshot of URLs page"](
-!["Screenshot of URLs page"](
-!["Screenshot of URLs page"](
-!["Screenshot of URLs page"](
-!["Screenshot of URLs page"](
+!["Screenshot of URLs page"](https://github.com/JayJayTing/tweeter/blob/master/screenshots/Screen%20Shot%202019-07-18%20at%209.44.00%20PM.png)
+!["Screenshot of URLs page"](https://github.com/JayJayTing/tweeter/blob/master/screenshots/Screen%20Shot%202019-07-18%20at%209.44.12%20PM.png)
+!["Screenshot of URLs page"](https://github.com/JayJayTing/tweeter/blob/master/screenshots/Screen%20Shot%202019-07-18%20at%209.44.34%20PM.png)
+!["Screenshot of URLs page"](https://github.com/JayJayTing/tweeter/blob/master/screenshots/Screen%20Shot%202019-07-18%20at%209.44.42%20PM.png)
+!["Screenshot of URLs page"](https://github.com/JayJayTing/tweeter/blob/master/screenshots/Screen%20Shot%202019-07-18%20at%209.45.00%20PM.png)
 
 ## Dependencies
 
